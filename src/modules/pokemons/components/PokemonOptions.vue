@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-5 flex flex-col">
+  <section class="flex flex-col mt-5">
     <button
       v-for="{ name, id } in options"
       :key="id"
@@ -19,8 +19,10 @@
 </template>
 
 <script setup lang="ts">
+import { defineProps, defineEmits } from 'vue';
+
 interface PokemonOptionsProps {
-  options: string[];
+  options: any[];
   selected: boolean;
   correctAnswer: number;
 }
